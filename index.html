@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Cool Submissions</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <h1>{{title}}</h1>
+  <div id="form">
+    <label for="name">Name: </label>
+    <input type="text" v-model="name" placeholder="Name" id="name" name="name" required="required" v-bind:class="nameValid ? 'validborder' : 'invalidborder'">
+    <p v-bind:class="nameValid ? 'validmsg' : 'invalidmsg'"><small>{{namemsg}}</small></p>
+    
+    <label for="name">Age: </label>
+    <input type="text" v-model="age" placeholder="Age" id="age" name="age" required="required" v-bind:class="ageValid ? 'validborder' : 'invalidborder'">
+        <p v-bind:class="ageValid ? 'validmsg' : 'invalidmsg'"><small>{{agemsg}}</small></p>
+    
+        <label for="name">E-mail: </label>
+    <input type="text" v-model="email" placeholder="E-Mail" id="email" name="email" required="required" v-bind:class="mailValid ? 'validborder' : 'invalidborder'">
+        <p v-bind:class="mailValid ? 'validmsg' : 'invalidmsg'"><small>{{mailmsg}}</small></p>
+    
+            <label for="comments">Comments (Optional): </label>
+      <textarea v-model="comments" id="comments" placeholder="Comments" name="comments" rows="5" cols="40" v-bind:class="comntValid ? 'validborder' : 'invalidborder'"></textarea>
+        <p v-bind:class="comntValid ? 'validmsg' : 'invalidmsg'"><small>{{cmntmsg}}</small></p>
+    
+    <button v-on:click="cansubmit()" class="submitBtn">Submit</button>
+  </div>
+  <h3>{{submitmsg}}</h3>
+  <div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
