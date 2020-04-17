@@ -25,9 +25,9 @@ var app = new Vue({
 computed: {
     cansubmit: function () {
       if (this.nameValid && this.ageValid && this.mailValid && this.comntValid) {
-        return this.submitmsg = "Submission Successful";
+        return this.submitmsg = "Submitted";
       } else {
-        return this.submitmsg = "Submission Unsuccessful"
+        return this.submitmsg = "Not Submitted";
       }
     }
   },
